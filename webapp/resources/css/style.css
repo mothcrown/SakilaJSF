@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: "Trebuchet MS";
+}
+
+header {
+    padding-top: .5em;
+    padding-left: 1em;
+    background-color: #ebedf0;
+    border-bottom: 1px solid rgb(188, 199, 207);
+}
+
+header h1 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+h1 span {
+    color: #fca752;
+}
+
+li {
+    color: #25AAE1;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #25AAE1;
+}
+

@@ -1,0 +1,45 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>SakilaJSF: Gestión de actores</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <h:outputStylesheet library="css" name="style.css"/> 
+    </h:head>
+    <h:body>
+        <header>
+            <h1><span>SakilaJSF:</span> Introducción a JSF</h1>
+            <p>por mothcrown</p>
+        </header>
+        <p:dataTable var="actor" value="#{actorBean.actorList}"
+                paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+                paginator="true" rows="10">
+            <f:facet name="header">
+               Lista de actores
+            </f:facet>
+
+            <p:column headerText="Id">
+                <h:outputText value="#{actor.id}" />
+            </p:column>
+
+            <p:column headerText="Nombre">
+                <h:outputText value="#{actor.firstName}" style="text-transform:capitalize"/>
+            </p:column>
+
+            <p:column headerText="Apellido">
+                <h:outputText value="#{actor.lastName}" />
+            </p:column>
+
+            <p:column headerText="Última actualización">
+                <h:outputText value="#{actor.lastUpdate}">
+                    <f:convertDateTime pattern="dd/MM/yyyy HH:mm" />
+                </h:outputText>
+            </p:column>
+        </p:dataTable>
+    </h:body>
+</html>
